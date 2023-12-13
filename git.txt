@@ -1,0 +1,51 @@
+#### Daily Use Commands:
+
+1.) View Git Config:
+git config --list
+
+2.) View Current branch
+git branch --show-current
+
+3.) Git Global Setup
+git config --global user.name "<username>"
+git config --global user.name "<email_id>"
+
+4.) Add origin to git
+git remote add origin http://<git>/<repo_name>.git
+
+5.) Check git origin remote
+git remote -v
+
+6.) Remove existing git remote origin
+git remote remove origin
+git remote remove source
+
+7.) Push an existing folder to github/gitlab
+cd existing_folder
+git init
+git remote add origin http://<git>/<repo_name>.git
+git add .
+git commit -m "<commit message>"
+git push -u origin <branch_name>
+
+8.) Create new branch
+git checkout -b <branch_name>
+
+9.) Git clone from a git repo from a specific branch
+git clone -b <branch_name> http://<git>/<repo_name>.git
+
+10.) To check which commit the sile is deleted
+git log --diff-filter=D --summary
+
+##### Daily Issues and its Solutions
+
+1.) ! [rejected] master -> master (fetch first)
+error: failed to push some refs to <.git>
+A.) git pull origin master
+
+2.) fatal: refusing to merge unrelated histories
+A.) git pull origin master --allow-unrelated-histories
+
+3.) error: gRPC failed: curl 55 OpenSSL SSL_Write: Connection was aborted, error 10053
+A.) git push --force
+
